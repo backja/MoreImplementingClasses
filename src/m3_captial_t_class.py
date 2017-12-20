@@ -153,8 +153,7 @@ class CapitalT(object):
             self.center.y+height-letter_thickness/2)
         self.v_rect = rg.Rectangle(self.vertical_top_corner,
                                self.vertical_bottom_corner)
-        self.fill_color = 'white'
-        self.outline_color = 'black'
+
     def attach_to(self, window):
         """
         What comes in:
@@ -269,14 +268,14 @@ class CapitalT(object):
           :rtype: CapitalT
         """
         # --------------------------------------------------------------
-        # TODO: 7.
+        # Done: 7.
         #   READ the above specification, including the Example.
         #   Implement and test this method by uncommenting the appropriate
         #     run_test method in main. Compare the graphics window to
         #     clone.pdf.
         # --------------------------------------------------------------
         new_t = CapitalT(self.center,self.width,self.height,self.thickness)
-        new_t.set_colors(self.fill_color,self.outline_color)
+        new_t.set_colors(self.v_rect.fill_color,self.v_rect.outline_color)
         return new_t
 
 
